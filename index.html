@@ -29,12 +29,20 @@
         <div class="form-group">
           <label for="percent" class="form-label">Profit Percent</label>
           <div class="input-group">
-            <input v-model.number="percent" id="percent" type="number" min="0" max="100" class="form-control" placeholder="25">
+            <input v-model.number="percent" id="percent" type="number" min="0" class="form-control" placeholder="25">
             <span class="input-group-addon">%</span>
           </div>
         </div>
 
-        <h1>Selling Price: {{ convertToCurrency( salePrice, '$0,0.00' )}}</h1>
+        <div class="form-group">
+          <label for="sellingPrice" class="form-label">Selling Price</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input v-model.number="sellingPrice" id="sellingPrice" step="1" type="number" class="form-control" placeholder="25">
+          </div>
+        </div>
+
+        <!-- <h1>Selling Price: {{ convertToCurrency( sellingPrice, '$0,0.00' )}}</h1> -->
 
       </div>
     </div>
