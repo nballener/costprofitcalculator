@@ -20,6 +20,9 @@ window.addEventListener('load', function () {
       sellingPrice: 125
     },
     watch: {
+      cost: function (newCost) {
+        this.getSellingPrice()
+      },
       percent: function (newPercent) {
         this.getSellingPrice()
       },
