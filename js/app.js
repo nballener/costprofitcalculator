@@ -15,10 +15,13 @@ window.addEventListener('load', function () {
       app: {
         title: 'Cost Profit Calculator'
       },
-      cost: 0
+      cost: 100,
+      percent: 25
     },
     computed: {
-      profit: 0
+      salePrice: function () {
+        return this.cost * (1 + this.percent / 100)
+      }
     },
     methods: {
       convertToCurrency: function(number, format) {
